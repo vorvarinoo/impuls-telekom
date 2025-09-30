@@ -1,0 +1,31 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --black-50: #808080;
+  --black-30: #b3b3b3;
+  --black-10: #e6e6e6;
+  --red: #c21515;
+  --red-50: #e18a8a;
+
+  --error: var(--red);
+
+  --accent: var(--red);
+  --accent-50: var(--red-50);
+
+  // other vars
+  --min-site-width: 375px;
+  --max-site-width: 1920px;
+  --max-container-width: 1590px;
+
+  // transitions
+  --duration-default: 0.3s;
+  --duration-fast: 0.15s;
+  --duration-slow: 0.6s;
+}
+
+$sm: 540px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1440px;
+$xxl: 1920px;
+$main-font: "Roboto";

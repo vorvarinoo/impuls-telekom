@@ -1,0 +1,72 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+  color: var(--black);
+  // background-color: var(--white);
+  background-color: var(--black-10);
+
+  @include media-min($xxl) {
+    font-size: 1.8rem;
+  }
+}
+
+a {
+  text-decoration-color: var(--link-line, transparent);
+}
+
+.t1 {
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 700;
+  @include indent-reset;
+
+  @include media-min($xl) {
+    font-size: 48px;
+  }
+
+  @include media-min($xxl) {
+    font-size: 64px;
+  }
+}
+
+.t2 {
+  font-size: 32px;
+  @include indent-reset;
+
+  @include media-min($xxl) {
+    font-size: 48px;
+  }
+}
+
+.t3 {
+  font-size: 24px;
+  @include indent-reset;
+
+  @include media-min($xxl) {
+    font-size: 32px;
+  }
+}
+
+.t4 {
+  font-size: 16px;
+  @include indent-reset;
+
+  @include media-min($xxl) {
+    font-size: 24px;
+  }
+}
+
+.t-def {
+  font-size: 16px;
+  @include indent-reset;
+
+  @include media-min($xxl) {
+    font-size: 18px;
+  }
+}

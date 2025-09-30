@@ -1,0 +1,122 @@
+.common {
+  padding: 160px;
+  &__wrap {
+    position: relative;
+    background: linear-gradient(180deg, #e6e6e6 0%, #fff 100%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 0 24px;
+    display: grid;
+  }
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+
+  &__top {
+    top: 0;
+    transform: translateY(-98%);
+  }
+
+  &__bottom {
+    bottom: 0;
+    transform: translateY(98%);
+  }
+
+  &__title {
+    line-height: 1.1;
+    justify-self: center;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 32px;
+
+    & span {
+      display: inline-block;
+      font-weight: 400;
+      color: var(--black-50);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 16px;
+    align-items: flex-start;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    border-radius: 12px;
+    padding: 16px;
+    overflow: hidden;
+    min-height: 270px;
+    background-image: url("../img/dotted-bg-primary.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+    &::before {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+    }
+
+    &:nth-child(3n + 2) {
+      margin-top: 32px;
+    }
+
+    &:nth-child(3n) {
+      margin-top: 64px;
+    }
+  }
+
+  &__item-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item-title {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  &__button {
+    margin-top: 16px;
+    padding: 32px 16px;
+    justify-self: center;
+  }
+}

@@ -1,0 +1,49 @@
+.btn {
+  @include btn-reset;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-icon {
+  & svg {
+    margin-right: 12px;
+  }
+
+  &--reverse {
+    & svg {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+.btn-primary, .btn-secondary {
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: background-color var(--duration-default) ease-in-out, color var(--duration-default) ease-in-out, border-color var(--duration-default) ease-in-out;
+
+  @include any-hover {
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+  }
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
