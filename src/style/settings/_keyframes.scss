@@ -22,3 +22,42 @@
     transform: translateX(7px);
   }
 }
+
+@keyframes cross-top-line {
+  0% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cross-middle-line {
+  20% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
+
+@keyframes cross-bottom-line {
+  20% {
+    transform: translateY(-8px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

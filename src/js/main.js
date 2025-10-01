@@ -16,6 +16,7 @@ import {
   validateForms
 } from './modules/validate.js';
 
+
 document.addEventListener( 'DOMContentLoaded', () => {
   initSiteSettings();
 

@@ -89,4 +89,12 @@
       }
     }
   }
+
+  &__button {
+    align-self: center;
+
+    @include media-min($md) {
+      align-self: flex-start;
+    }
+  }
 }

@@ -1,7 +1,18 @@
 .quiz {
+  padding: 24px 0;
+
+  @include media-min($xxl) {
+    padding: 64px 0;
+  }
+
   &__title {
     display: grid;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+
+    @include media-min($lg) {
+      margin-bottom: 48px;
+    }
+
     & span {
       color: var(--accent);
     }

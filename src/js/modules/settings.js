@@ -1,4 +1,3 @@
-import baguetteBox from 'baguettebox.js';
 import SmoothScroll from 'smooth-scroll';
 
 import {
@@ -13,12 +12,16 @@ import {
   initScrollObserver,
 } from './scroll-observer.js';
 
+import {
+  initBurgerMenu
+} from './burger.js';
+
 const initSiteSettings = () => {
   iosVhFix();
   initScrollObserver();
+  initBurgerMenu();
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
   new AcceptCookiePopup();
-  [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
 };
 
 export {

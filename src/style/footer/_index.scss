@@ -1,12 +1,6 @@
 .footer {
+  padding: 32px 0;
   position: relative;
-  padding: 48px 0;
-  // background-color: var(--white);
-  // background-image: url("../img/dotted-bg-secondary.png");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-
   background: linear-gradient(
       to bottom,
       rgb(255, 255, 255) 0%,
@@ -15,26 +9,26 @@
     url("../img/dotted-bg-secondary.png") center / cover no-repeat,
     linear-gradient(var(--white), var(--white));
 
+  @include media-min($lg) {
+    padding: 48px 0;
+  }
+
   @include media-min($xxl) {
     padding: 64px 0;
   }
 
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-
-  //   background:
-  // }
-
   &__logo {
     max-width: 200px;
     width: 100%;
-    margin-right: 32px;
     padding-top: 16px;
+    padding-left: 16px;
+    margin-bottom: 32px;
+
+    @include media-min($lg) {
+      margin-bottom: 0;
+      padding-left: 0;
+      margin-right: 32px;
+    }
 
     @include media-min($xxl) {
       max-width: 300px;
@@ -46,6 +40,7 @@
     position: relative;
     z-index: 1;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     border-radius: 12px;
     margin-bottom: 32px;
@@ -55,6 +50,10 @@
       rgba(0, 0, 0, 0) 100%
     );
 
+    @include media-min($lg) {
+      flex-direction: row;
+    }
+
     @include media-min($xl) {
       padding-left: 16px;
       margin-bottom: 48px;
@@ -62,8 +61,14 @@
   }
 
   &__address {
-    padding-top: 24px;
-    margin-right: 32px;
+    padding: 0 16px;
+    margin-bottom: 32px;
+
+    @include media-min($lg) {
+      margin-bottom: 0;
+      padding: 24px 0 0;
+      margin-right: 32px;
+    }
 
     @include media-min($xxl) {
       margin-right: 64px;
@@ -88,9 +93,13 @@
     background-color: var(--accent);
     backdrop-filter: blur(10px);
     border-radius: 12px;
-    padding: 32px;
-    max-width: 415px;
+    padding: 16px;
     width: 100%;
+
+    @include media-min($lg) {
+      padding: 32px;
+      max-width: 415px;
+    }
 
     @include media-min($xxl) {
       max-width: 575px;
@@ -100,6 +109,10 @@
   &__contacts-list {
     display: grid;
     gap: 24px;
+
+    @include media-min($xxl) {
+      gap: 48px;
+    }
   }
 
   &__contacts-label {
@@ -116,11 +129,24 @@
     position: relative;
     z-index: 1;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    @include media-min($md) {
+      flex-direction: row;
+    }
   }
 
   &__bottom-item {
     display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include media-min($md) {
+        margin-bottom: 0;
+      }
+    }
 
     &--accent {
       color: var(--accent);
