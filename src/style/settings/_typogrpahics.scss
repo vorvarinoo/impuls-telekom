@@ -8,8 +8,8 @@ body {
   font-weight: 400;
   font-family: $main-font, Arial, Helvetica, sans-serif;
   color: var(--black);
-  // background-color: var(--white);
-  background-color: var(--black-10);
+  background-color: var(--white);
+  // background-color: var(--black-10);
 
   @include media-min($xxl) {
     font-size: 1.8rem;

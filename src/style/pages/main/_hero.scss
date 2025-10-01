@@ -1,9 +1,15 @@
 .hero {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #fff 80%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 80%);
   position: relative;
-  padding: 30px 0 92px;
+  padding: 120px 0;
+
+  @include media-min($lg) {
+    padding: 92px 0;
+  }
 
   @include media-min($xxl) {
-    padding: 88px 0 164px;
+    padding: 160px 0;
   }
 
   &__title {
@@ -26,14 +32,20 @@
   }
 
   &__buttons {
-    display: flex;
+    display: grid;
+    @include media-min($md) {
+      display: flex;
+    }
   }
 
   &__button {
-    padding: 30px 16px;
-
     &:not(:last-child) {
-      margin-right: 16px;
+      margin-bottom: 16px;
+
+      @include media-min($md) {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
     }
   }
 

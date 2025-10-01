@@ -1,0 +1,128 @@
+.steps {
+  padding: 48px 0;
+
+  @include media-min($xl) {
+    padding: 64px 0;
+  }
+
+  @include media-min($xxl) {
+    padding: 96px 0;
+  }
+
+  &__title {
+    display: grid;
+
+    & span {
+      color: var(--accent);
+    }
+  }
+}
+
+.steps-list {
+  display: grid;
+  align-items: flex-start;
+  counter-reset: step-counter;
+  gap: 24px;
+
+  @include media-min($lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  &__item {
+    counter-increment: step-counter;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 8px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+      ),
+      url("../img/dotted-bg-primary.png") center/cover no-repeat;
+
+    @include media-min($lg) {
+      min-height: 230px;
+    }
+
+    @include media-min($xl) {
+      padding: 8px;
+    }
+
+    &::before {
+      position: absolute;
+      content: counter(step-counter);
+      top: 4px;
+      right: 4px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background-color: var(--black-10);
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--white);
+    }
+
+    &:nth-child(4n + 2) {
+      @include media-min($lg) {
+        margin-top: 16px;
+      }
+
+      @include media-min($lg) {
+        margin-top: 32px;
+      }
+    }
+
+    &:nth-child(4n + 3) {
+      @include media-min($lg) {
+        margin-top: 32px;
+      }
+
+      @include media-min($lg) {
+        margin-top: 64px;
+      }
+    }
+
+    &:nth-child(4n + 4) {
+      @include media-min($lg) {
+        margin-top: 64px;
+      }
+
+      @include media-min($lg) {
+        margin-top: 96px;
+      }
+    }
+  }
+
+  &__item-title {
+    display: grid;
+    color: var(--accent);
+    font-weight: 700;
+    padding-right: 32px;
+    margin-bottom: 24px;
+
+    & span {
+      display: inline-block;
+      font-weight: 400;
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--white);
+  }
+}

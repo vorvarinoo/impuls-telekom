@@ -1,0 +1,92 @@
+.ecosystem {
+  padding: 48px 0;
+
+  @include media-min($xl) {
+    padding: 64px 0;
+  }
+
+  @include media-min($xxl) {
+    padding: 96px 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    display: grid;
+
+    @include media-min($xxl) {
+      margin-bottom: 32px;
+    }
+
+    & span {
+      color: var(--accent);
+    }
+  }
+
+  &__descr {
+    display: grid;
+    gap: 16px;
+    max-width: 525px;
+  }
+
+  &__text {
+    margin: 0;
+
+    &--accent {
+      color: var(--accent);
+      font-weight: 700;
+    }
+  }
+
+  &__note {
+    color: var(--black-50);
+    max-width: 310px;
+    margin-bottom: 24px;
+
+    @include media-min($xxl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+
+    @include media-min($xl) {
+      padding-right: 32px;
+    }
+
+    @include media-min($xxl) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__item {
+    font-weight: 700;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      url("../img/dotted-bg-primary.png") left top/ 597px 300px no-repeat;
+
+    padding: 16px 8px;
+    margin-bottom: 4px;
+
+    @include media-min($lg) {
+      padding: 16px;
+      margin-bottom: 8px;
+    }
+
+    @include media-min($xxl) {
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+
+      @include media-min($xxl) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

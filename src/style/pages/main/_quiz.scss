@@ -1,0 +1,13 @@
+.quiz {
+  &__title {
+    display: grid;
+    margin-bottom: 48px;
+    & span {
+      color: var(--accent);
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+  }
+}

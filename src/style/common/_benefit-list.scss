@@ -1,0 +1,35 @@
+.benefit-list {
+  &__item {
+    position: relative;
+    padding: 8px 8px 16px;
+    display: flex;
+    align-items: flex-start;
+    border-top: 1px dashed var(--accent);
+    border-radius: 16px 16px 0 0;
+  }
+
+  &__item-icon {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 16px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 4px;
+
+    @include media-min($xxl) {
+      padding: 5px;
+    }
+
+    & svg {
+      @include media-min($xxl) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__item-text {
+    font-weight: 700;
+    color: var(--accent);
+  }
+}
