@@ -16,11 +16,16 @@ import {
   validateForms
 } from './modules/validate.js';
 
+import {
+  thanksPageMessage
+} from './modules/thanks-page.js';
+
 
 document.addEventListener( 'DOMContentLoaded', () => {
   initSiteSettings();
 
   window.addEventListener( 'load', () => {
+    thanksPageMessage();
     validateForms();
     initModals();
     initSliders();

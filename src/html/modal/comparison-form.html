@@ -1,0 +1,32 @@
+<div class="modal__main">
+  <div class="mb-4">
+    <h2 class="t1 modal__title pr-md-7">
+      Получить сравнение: VMware vs Китай vs российские аналоги
+    </h2>
+  </div>
+  <form id="form-comparison" class="modal-form" data-validate>
+    <input type="hidden" name="thanks"
+      value="Наш эксперт свяжется с вами в течение 15 минут и отправит сравнительный анализ.">
+    <input type="hidden" name="Форма" value="Получить сравнение: VMware vs Китай vs российские аналоги">
+    <div class="modal-form__main">
+      @include('../common/form-inputs.html')
+
+      <span class="modal-form__note modal-form__row">
+        Обязательные поля для заполнения *
+      </span>
+    </div>
+
+    <div class="modal-form__bottom">
+      <button type="submit" class="btn btn-secondary modal-form__button">
+        Оставить заявку
+      </button>
+
+      <div>
+        <label class="form-checkbox form-checkbox--color-black-30">
+          <input type="checkbox" name="confirm" data-validate="confirm" required />
+          <span>@include('../common/confirm-text.html')</span>
+        </label>
+      </div>
+    </div>
+  </form>
+</div>

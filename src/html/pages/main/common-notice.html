@@ -1,4 +1,4 @@
-<section class="common">
+<section class="site__section common">
   <div class="container">
     <div class="row">
       <div class="col-12 col-xxl-10 offset-xxl-1">
@@ -15,7 +15,7 @@
               <li class="common__item">
                 <div class="common__item-content">
                   <h3 class="t4 common__item-title">УВЕЛИЧЕНИЕ СТОИМОСТИ</h3>
-                  <ul>
+                  <ul class="common__item-list">
                     <li>Цены выросли в 2–3 раза</li>
                     <li>Broadcom ориентирован на Fortune 500</li>
                     <li>
@@ -31,7 +31,7 @@
                   <h3 class="t4 common__item-title">
                     ОТСУТСТВИЕ ОБНОВЛЕНИЙ с 24.04.25
                   </h3>
-                  <ul>
+                  <ul class="common__item-list">
                     <li>Репозитории перенесены на серверы Broadcom</li>
                     <li>Обновления доступны только по подписке</li>
                     <li>Без подписки — невозможно поддерживать безопасность</li>
@@ -42,7 +42,7 @@
               <li class="common__item">
                 <div class="common__item-content">
                   <h3 class="t4 common__item-title">ТОЛЬКО ПОДПИСКИ</h3>
-                  <ul>
+                  <ul class="common__item-list">
                     <li>Нет on-premise лицензий</li>
                     <li>Лицензирование по ядрам, не по сокетам</li>
                     <li>
@@ -54,16 +54,11 @@
               </li>
             </ul>
 
-            <button class="btn btn-secondary common__button">
+            <button data-hystmodal="#alternative-form-modal" class="btn btn-secondary common__button">
               Получить альтернативу
             </button>
           </div>
-          <svg
-            class="common__bottom"
-            width="1110"
-            height="100"
-            aria-hidden="true"
-          >
+          <svg class="common__bottom" width="1110" height="100" aria-hidden="true">
             <use xlink:href="./assets/img/sprite.svg#common-bottom"></use>
           </svg>
         </div>

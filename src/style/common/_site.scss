@@ -16,4 +16,9 @@
   &__footer {
     flex-shrink: 0;
   }
+
+  &__section {
+    position: relative;
+    z-index: 1;
+  }
 }

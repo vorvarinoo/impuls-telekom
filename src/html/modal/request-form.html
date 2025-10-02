@@ -1,0 +1,56 @@
+<div class="modal__main">
+  <div class="mb-4">
+    <h2 class="t1 modal__title">Оставьте заявку</h2>
+    <div class="t4 modal__descr">
+      После отправки — звонок менеджера в течение 15 минут.
+      <span> Обещаем: никакого спама, только полезную информацию. </span>
+    </div>
+  </div>
+  <form action="" class="modal-form">
+    <div class="modal-form__main">
+      <label class="form-label">
+        <span>Имя *</span>
+        <input type="text" class="form-input" />
+      </label>
+
+      <label class="form-label">
+        <span>Компания *</span>
+        <input type="text" class="form-input" />
+      </label>
+
+      <label class="form-label">
+        <span>Телефон *</span>
+        <input type="tel" class="form-input" />
+      </label>
+
+      <label class="form-label">
+        <span>Email *</span>
+        <input type="email" class="form-input" />
+      </label>
+
+      <label class="form-label modal-form__row">
+        <span>Выберите: *</span>
+        <select name="" id="" class="form-input">
+          <option value="">У нас VMware, нет обновлений</option>
+          <option value="">У нас VMware, есть обновлений</option>
+        </select>
+      </label>
+
+      <span class="modal-form__note modal-form__row">
+        Обязательные поля для заполнения *
+      </span>
+    </div>
+
+    <div class="modal-form__bottom">
+      <button type="submit" class="btn btn-secondary modal-form__button">
+        Оставить заявку
+      </button>
+
+      <label class="form-checkbox">
+        <input type="checkbox" name="" id="" class="visually-hidden" />
+        <span></span>
+        @include('../common/confirm-text.html')
+      </label>
+    </div>
+  </form>
+</div>

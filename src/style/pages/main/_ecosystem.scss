@@ -1,5 +1,6 @@
 .ecosystem {
   padding: 48px 0;
+  background-color: var(--white);
 
   @include media-min($xl) {
     padding: 64px 0;

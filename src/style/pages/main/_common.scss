@@ -1,5 +1,7 @@
 .common {
   padding: 64px 0;
+  background: linear-gradient(180deg, #fff 20%, rgba(255, 255, 255, 0.8) 100%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 80%);
 
   @include media-min($lg) {
     padding: 128px 0;
@@ -137,6 +139,14 @@
     color: var(--accent);
     font-weight: 700;
     margin-bottom: 24px;
+  }
+
+  &__item-list {
+    @include list-reset;
+    padding-left: 24px;
+    list-style-type: disc;
+    display: grid;
+    gap: 6px;
   }
 
   &__button {

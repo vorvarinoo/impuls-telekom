@@ -1,5 +1,6 @@
 .quiz {
   padding: 24px 0;
+  background-color: var(--white);
 
   @include media-min($xxl) {
     padding: 64px 0;

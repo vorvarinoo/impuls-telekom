@@ -1,5 +1,7 @@
 .solution {
   padding: 64px 0 48px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #fff 80%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 80%);
 
   @include media-min($xl) {
     padding: 96px 0 64px;

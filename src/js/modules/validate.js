@@ -11,8 +11,13 @@ import {
 
 const justValidateConfig = validateConfig.justValidate;
 
-const isSendOk = () => {
-  return;
+const isSendOk = (evt) => {
+  const form = evt.target;
+  const input = form.querySelector('input[name="thanks"]');
+
+  if (input) {
+    window.open(`/page-thanks.html?message-thanks=${input.value}`);
+  }
 };
 
 const isSendError = ( target ) => {
@@ -38,6 +43,13 @@ export const validateForms = () => {
       switch ( input.dataset.validate ) {
         case 'name':
           validationRules.addField( `${formID} [data-validate="name"]`, [ {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Поле обязательно для заполнения'
+          }, ] );
+          break;
+        case 'company':
+          validationRules.addField( `${formID} [data-validate="company"]`, [ {
             rule: 'required',
             value: true,
             errorMessage: 'Поле обязательно для заполнения'
@@ -96,7 +108,7 @@ export const validateForms = () => {
       }
     } );
     validationRules.onSuccess( ( evt ) => {
-      sendData( evt, `${requestsConfig.handlerURL}${sentParams}`, isSendOk, isSendError );
+      sendData( evt, `${requestsConfig.handlerURL}${sentParams}`, isSendOk(evt), isSendError );
     } );
   } );
 };

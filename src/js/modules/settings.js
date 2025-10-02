@@ -16,10 +16,16 @@ import {
   initBurgerMenu
 } from './burger.js';
 
+import {
+  initFixedBackgrounds
+} from './background-image.js';
+
+
 const initSiteSettings = () => {
   iosVhFix();
   initScrollObserver();
   initBurgerMenu();
+  initFixedBackgrounds();
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
   new AcceptCookiePopup();
 };

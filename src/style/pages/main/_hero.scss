@@ -31,6 +31,26 @@
     }
   }
 
+  &__descr {
+    margin-bottom: 32px;
+    display: grid;
+    gap: 16px;
+
+    @include media-min($xxl) {
+      margin-bottom: 64px;
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+
+    & ul {
+      @include list-reset;
+      padding-left: 24px;
+      list-style-type: disc;
+    }
+  }
+
   &__buttons {
     display: grid;
     @include media-min($md) {

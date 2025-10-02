@@ -1,0 +1,63 @@
+.modal-form {
+  display: grid;
+
+  @include media-min($lg) {
+    margin-left: auto;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  @include media-min($xxl) {
+    max-width: 800px;
+  }
+
+  &__main {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 32px;
+
+    @include media-min($xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__row {
+    @include media-min($xl) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    & li:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__note {
+    color: var(--black-30);
+    justify-self: flex-end;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+
+    @include media-min($xxl) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__button {
+    margin-bottom: 16px;
+    flex-shrink: 0;
+
+    @include media-min($xxl) {
+      margin-bottom: 0;
+      margin-right: 64px;
+    }
+  }
+}
