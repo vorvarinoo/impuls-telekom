@@ -1,15 +1,3 @@
-const sliderConfig = {
-  default: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    watchSlidesProgress: true,
-    navigation: {
-      prevEl: '[data-to-slide="prev"]',
-      nextEl: '[data-to-slide="next"]',
-    }
-  },
-};
-
 const smoothScrollConfig = {
   speed: 900,
   speedAsDuration: true,
@@ -53,11 +41,15 @@ const requestsConfig = {
   handlerURL: 'mail.php',
 };
 
+const cookieConfig = {
+  linkCookiePage: '/policy.html'
+}
+
 export {
-  sliderConfig,
   smoothScrollConfig,
   modalConfig,
   validateConfig,
   observerConfig,
   requestsConfig,
+  cookieConfig,
 };

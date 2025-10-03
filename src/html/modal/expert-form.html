@@ -1,6 +1,6 @@
 <div class="modal__main">
   <div class="mb-4">
-    <h2 class="t1 modal__title pr-md-7"></h2>
+    <h2 class="t1 modal__title pr-md-7">Задать вопрос эксперту</h2>
   </div>
   <form id="form-expert" class="modal-form" data-validate>
     <input type="hidden" name="thanks" value="Наш эксперт ответит вам в течение 15 минут.">
@@ -10,8 +10,8 @@
       @include('../common/form-inputs.html')
 
       <label class="form-label modal-form__row">
-        <span>Вопрос</span>
-        <textarea data-validate="message"></textarea>
+        <span>Вопрос:</span>
+        <textarea data-validate="message" class="form-input form-input--area"></textarea>
       </label>
 
       <span class="modal-form__note modal-form__row">

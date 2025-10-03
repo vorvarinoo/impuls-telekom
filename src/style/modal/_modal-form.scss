@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
 
-    @include media-min($xxl) {
+    @include media-min($xl) {
       flex-direction: row;
       align-items: flex-start;
     }
@@ -55,7 +55,7 @@
     margin-bottom: 16px;
     flex-shrink: 0;
 
-    @include media-min($xxl) {
+    @include media-min($xl) {
       margin-bottom: 0;
       margin-right: 64px;
     }

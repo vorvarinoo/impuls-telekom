@@ -90,10 +90,10 @@
     position: absolute;
     bottom: 48px;
     right: 10px;
-    background-image: url("../img/dotted-bg-secondary.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    border-radius: 6px;
+    overflow: hidden;
+    background: url("../img/hero-note.svg") top left / contain no-repeat,
+      url("../img/dotted-bg-secondary.png") center / cover no-repeat;
 
     @include media-min($xl) {
       display: block;

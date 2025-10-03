@@ -1,0 +1,58 @@
+.experts {
+  --wrap-background: linear-gradient(180deg, #fff 0%, #e6e6e6 100%);
+  --svg-top-color: var(--white);
+  --svg-bottom-color: var(--black-10);
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #fff 100%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+
+  &__main {
+    gap: 32px;
+
+    @include media-min($md) {
+      gap: 64px;
+      grid-template-columns: 1fr 0.6fr;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 16px;
+    margin-bottom: 32px;
+
+    @include media-min($md) {
+      margin-bottom: 96px;
+    }
+
+    @include media-min($xxl) {
+      margin-top: 24px;
+    }
+  }
+
+  &__people {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  &__button {
+    margin-top: 24px;
+    width: 100%;
+
+    @include media-min($md) {
+      margin-top: 32px;
+      width: auto;
+    }
+
+    @include media-min($xxl) {
+      margin-top: 48px;
+      width: auto;
+    }
+  }
+}

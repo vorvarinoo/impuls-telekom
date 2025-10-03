@@ -4,9 +4,15 @@ const thanksPageMessage = () => {
   const message = params.get('message-thanks');
 
   const messageElement = document.querySelector('#message-thanks');
-   // элемент, куда выводить сообщение
+
   if (messageElement) {
-    messageElement.textContent = message; // вывести текст в элемент
+    const messageText = messageElement.querySelector('#message-thanks-text');
+
+    messageText.textContent = message;
+
+    setTimeout(() => {
+      messageElement.classList.remove('is-hidden');
+    }, 50);
   }
 };
 

@@ -132,7 +132,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include media-min($md) {
+    @include media-min($lg) {
       flex-direction: row;
     }
   }
@@ -143,7 +143,7 @@
     &:not(:last-child) {
       margin-bottom: 16px;
 
-      @include media-min($md) {
+      @include media-min($lg) {
         margin-bottom: 0;
       }
     }
@@ -151,11 +151,28 @@
     &--accent {
       color: var(--accent);
     }
+
+    &--link {
+      transition: color var(--duration-default) ease-in-out;
+
+      @include any-hover {
+        &:hover {
+          color: var(--black);
+        }
+      }
+    }
   }
 
   &__dev-brand {
     display: inline-block;
     color: inherit;
     font-weight: 700;
+    transition: color var(--duration-default) ease-in-out;
+
+    @include any-hover {
+      &:hover {
+        color: var(--black);
+      }
+    }
   }
 }

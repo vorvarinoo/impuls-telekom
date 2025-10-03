@@ -10,9 +10,6 @@ import {
   initModals
 } from './modules/modal.js';
 import {
-  initSliders
-} from './modules/slider.js';
-import {
   validateForms
 } from './modules/validate.js';
 
@@ -28,6 +25,5 @@ document.addEventListener( 'DOMContentLoaded', () => {
     thanksPageMessage();
     validateForms();
     initModals();
-    initSliders();
   } );
 } );

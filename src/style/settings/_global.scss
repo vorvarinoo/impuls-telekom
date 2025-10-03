@@ -23,3 +23,14 @@ dt,
 dd {
   margin: 0;
 }
+
+a {
+  color: var(--black);
+  transition: color var(--duration-default) ease-in-out;
+
+  @include any-hover {
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}

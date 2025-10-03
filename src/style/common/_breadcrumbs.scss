@@ -1,0 +1,12 @@
+.breadcrumbs {
+  & a {
+    color: var(--black-30);
+    transition: color var(--duration-default) ease-in-out;
+
+    @include any-hover {
+      &:hover {
+        color: var(--black);
+      }
+    }
+  }
+}

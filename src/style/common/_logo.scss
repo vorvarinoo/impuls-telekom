@@ -1,0 +1,8 @@
+.logo {
+  display: inline-block;
+  max-width: 138px;
+
+  @include media-min($xxl) {
+    max-width: 207px;
+  }
+}

@@ -7,8 +7,10 @@
 </head>
 
 <body class="site">
-  <div inert=""
-       id="site-top"></div>
+  <div inert="" id="site-top"></div>
   <div class="site__container">
     @include('html/header/index.html')
-    <main class="site__content">
+    <main class="site__content @if(context.title !== 'Главная'){ site__content--offset}">
+      @if(context.title !== 'Главная') {
+      @include('html/common/breadcrumbs.html', {path: '@bc', page: '@title' })
+      }

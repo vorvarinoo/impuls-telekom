@@ -1,3 +1,15 @@
-.swiper-slide {
-  height: var(--swiper-height, 100%);
+.hystmodal__window {
+  @include media-min($xl) {
+    max-width: 1110px;
+    width: 100%;
+  }
+
+  @include media-min($xxl) {
+    max-width: 1340px;
+    width: 100%;
+  }
+}
+
+.cookie-accept-popup__btn {
+  background-color: var(--accent) !important;
 }

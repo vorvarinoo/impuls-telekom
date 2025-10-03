@@ -39,14 +39,6 @@
   &__main {
     display: flex;
     flex-direction: column;
-
-    @include media-min($xl) {
-      width: 1110px;
-    }
-
-    @include media-min($xl) {
-      width: 1340px;
-    }
   }
 
   &__title {

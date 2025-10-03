@@ -1,0 +1,59 @@
+.case {
+  padding: 64px 0;
+  background: linear-gradient(
+      180deg,
+      var(--white) 0%,
+      rgba(255, 255, 255, 0.8) 100%
+    ),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--white) 100%);
+
+  @include media-min($xxl) {
+    padding: 96px 0;
+  }
+
+  &__title {
+    & span {
+      color: var(--accent);
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+
+    @include media-min($xxl) {
+      margin-top: 24px;
+    }
+  }
+
+  &__main {
+    display: grid;
+    gap: 32px;
+
+    @include media-min($xl) {
+      gap: 48px;
+    }
+  }
+
+  &__item {
+    border: 1px solid var(--black-10);
+    border-radius: 12px;
+    padding: 8px;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(90deg, var(--white) 0%, var(--white) 100%);
+    display: flex;
+    flex-direction: column;
+
+    @include media-min($lg) {
+      flex-direction: row;
+      padding: 16px;
+    }
+
+    @include media-min($xxl) {
+      padding: 32px;
+    }
+  }
+
+  &__button {
+    justify-self: center;
+  }
+}

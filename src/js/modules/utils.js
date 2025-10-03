@@ -1,11 +1,3 @@
-import Swiper from 'swiper';
-import {
-  Navigation
-} from 'swiper/modules';
-import {
-  sliderConfig
-} from './configs.js';
-
 const debounce = ( cb, delay ) => {
   let timer;
   return function( ...args ) {
@@ -65,21 +57,6 @@ const initModal = ( name, handler = 'data-hystmodal' ) => {
   name.init();
 };
 
-const initSlider = ( name, options = {} ) => {
-  const defaultConfig = Object.assign( {}, {
-    modules: [ Navigation ],
-  }, sliderConfig.default );
-  const customConfig = Object.assign( defaultConfig, options );
-
-  if ( typeof name === 'string' ) {
-    const sliderElement = document.querySelector( name );
-
-    if ( !sliderElement ) return;
-    return new Swiper( sliderElement, customConfig );
-  }
-
-  return new Swiper( name, customConfig );
-};
 
 const disableSubmitBtn = ( form ) => {
   if ( !form.querySelector( '[type="submit"]' ) ) return;
@@ -139,7 +116,6 @@ export {
   isEscKey,
   lockScroll,
   unlockScroll,
-  initSlider,
   initModal,
   sendData
 };

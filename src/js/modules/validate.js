@@ -12,11 +12,16 @@ import {
 const justValidateConfig = validateConfig.justValidate;
 
 const isSendOk = (evt) => {
+
+  if (window.ym && typeof window.ym === 'function') {
+    window.ym( 102563691, 'reachGoal', 'form_submit' );
+  }
+
   const form = evt.target;
   const input = form.querySelector('input[name="thanks"]');
 
   if (input) {
-    window.open(`/page-thanks.html?message-thanks=${input.value}`);
+    window.open(`/thanks.html?message-thanks=${input.value}`);
   }
 };
 

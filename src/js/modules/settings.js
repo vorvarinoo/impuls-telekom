@@ -1,7 +1,8 @@
 import SmoothScroll from 'smooth-scroll';
 
 import {
-  smoothScrollConfig
+  smoothScrollConfig,
+  cookieConfig
 } from './configs.js';
 
 import {
@@ -27,7 +28,7 @@ const initSiteSettings = () => {
   initBurgerMenu();
   initFixedBackgrounds();
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
-  new AcceptCookiePopup();
+  new AcceptCookiePopup(cookieConfig);
 };
 
 export {

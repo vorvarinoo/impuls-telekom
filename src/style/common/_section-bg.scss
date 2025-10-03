@@ -1,0 +1,57 @@
+.section-bg {
+  padding: 64px 0;
+  background: linear-gradient(
+      180deg,
+      var(--white) 20%,
+      rgba(255, 255, 255, 0.8) 100%
+    ),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--white) 80%);
+
+  @include media-min($lg) {
+    padding: 128px 0;
+  }
+
+  @include media-min($xxl) {
+    padding: 160px 0;
+  }
+
+  &__wrap {
+    position: relative;
+    background: var(
+      --wrap-background,
+      linear-gradient(180deg, #e6e6e6 0%, var(--white) 100%)
+    );
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    padding: 0 16px;
+    display: grid;
+
+    @include media-min($xxl) {
+      padding: 0 24px;
+    }
+  }
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+
+  &__top {
+    top: 0;
+    transform: translateY(-98%);
+    color: var(--svg-top-color, var(--black-10));
+  }
+
+  &__bottom {
+    bottom: 0;
+    transform: translateY(98%);
+    color: var(--svg-bottom-color, var(--white));
+  }
+}

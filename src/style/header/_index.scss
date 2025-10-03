@@ -23,15 +23,6 @@
     }
   }
 
-  &__logo {
-    display: block;
-    max-width: 138px;
-
-    @include media-min($xxl) {
-      max-width: 207px;
-    }
-  }
-
   &__content {
     display: none;
 
@@ -114,6 +105,13 @@
     backdrop-filter: blur(10px);
     background-color: var(--white);
     width: 100%;
+    transition: background-color var(--duration-default) ease-in-out;
+
+    @include any-hover {
+      &:hover {
+        background-color: var(--black-10);
+      }
+    }
   }
 }
 

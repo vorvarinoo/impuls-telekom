@@ -74,3 +74,14 @@ a {
     font-size: 18px;
   }
 }
+
+.contact-item {
+  color: inherit;
+  transition: color var(--duration-default) ease-in-out;
+
+  @include any-hover {
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

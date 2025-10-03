@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  @include('html/head/index.html')
-  <title>Название сайта: Список страниц</title>
-</head>
-
-<body>
-  <main>
-    <div class="container">
-      <h1>Карта сайта</h1>
-      <p>
-        <a href="#" target="_blank" rel="nofollow noreferer noopener">Макет</a>
-      </p>
-      <ol>
-        <li>
-          <a href="page-main.html">Страница "Главная"</a>
-        </li>
-        <li>
-          <a href="page-thanks.html">Страница "Спасибо"</a>
-        </li>
-      </ol>
-    </div>
-  </main>
-</body>
-
-</html>
+@include('head.html', {
+title: 'Главная',
+})
+@include('html/pages/main/index.html')
+@include('footer.html')
