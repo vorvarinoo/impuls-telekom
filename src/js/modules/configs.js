@@ -50,7 +50,7 @@ const observerConfig = {
 };
 
 const requestsConfig = {
-  handlerURL: 'https://jsonplaceholder.typicode.com/posts',
+  handlerURL: 'mail.php',
 };
 
 export {
