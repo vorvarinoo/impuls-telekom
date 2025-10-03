@@ -97,6 +97,8 @@ const sendData = (evt, url, isOk, isError) => {
 
   const formData = new FormData(form);
 
+  formData.delete('thanks');
+
   const napravlenieAll = form.querySelectorAll('[name="Направление"]');
   if (napravlenieAll.length > 1) {
     formData.delete('Направление');
