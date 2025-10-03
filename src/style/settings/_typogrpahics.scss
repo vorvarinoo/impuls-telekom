@@ -9,7 +9,6 @@ body {
   font-family: $main-font, Arial, Helvetica, sans-serif;
   color: var(--black);
   background-color: var(--white);
-  // background-color: var(--black-10);
 
   @include media-min($xxl) {
     font-size: 1.8rem;
@@ -21,10 +20,11 @@ a {
 }
 
 .t1 {
+  @include indent-reset;
+
   font-size: 36px;
   line-height: 1.1;
   font-weight: 700;
-  @include indent-reset;
 
   @include media-min($xl) {
     font-size: 48px;
@@ -36,8 +36,9 @@ a {
 }
 
 .t2 {
-  font-size: 32px;
   @include indent-reset;
+
+  font-size: 32px;
 
   @include media-min($xxl) {
     font-size: 48px;
@@ -45,8 +46,9 @@ a {
 }
 
 .t3 {
-  font-size: 24px;
   @include indent-reset;
+
+  font-size: 24px;
 
   @include media-min($xxl) {
     font-size: 32px;
@@ -54,8 +56,9 @@ a {
 }
 
 .t4 {
-  font-size: 16px;
   @include indent-reset;
+
+  font-size: 16px;
 
   @include media-min($xxl) {
     font-size: 24px;
@@ -63,8 +66,9 @@ a {
 }
 
 .t-def {
-  font-size: 16px;
   @include indent-reset;
+
+  font-size: 16px;
 
   @include media-min($xxl) {
     font-size: 18px;

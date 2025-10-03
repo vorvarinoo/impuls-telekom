@@ -1,6 +1,10 @@
 .hero {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #fff 80%),
-    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 80%);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      var(--white) 80%
+    ),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--white) 80%);
   position: relative;
   padding: 120px 0;
 
@@ -46,6 +50,7 @@
 
     & ul {
       @include list-reset;
+
       padding-left: 24px;
       list-style-type: disc;
     }
@@ -53,6 +58,7 @@
 
   &__buttons {
     display: grid;
+
     @include media-min($md) {
       display: flex;
     }

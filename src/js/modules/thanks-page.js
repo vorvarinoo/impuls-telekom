@@ -3,8 +3,6 @@ const thanksPageMessage = () => {
 
   const message = params.get('message-thanks');
 
-  console.log(message)
-
   const messageElement = document.querySelector('#message-thanks');
    // элемент, куда выводить сообщение
   if (messageElement) {

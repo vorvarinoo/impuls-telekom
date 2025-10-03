@@ -1,7 +1,11 @@
 .common {
   padding: 64px 0;
-  background: linear-gradient(180deg, #fff 20%, rgba(255, 255, 255, 0.8) 100%),
-    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 80%);
+  background: linear-gradient(
+      180deg,
+      var(--white) 20%,
+      rgba(255, 255, 255, 0.8) 100%
+    ),
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--white) 80%);
 
   @include media-min($lg) {
     padding: 128px 0;
@@ -13,7 +17,7 @@
 
   &__wrap {
     position: relative;
-    background: linear-gradient(180deg, #e6e6e6 0%, #fff 100%);
+    background: linear-gradient(180deg, #e6e6e6 0%, var(--white) 100%);
   }
 
   &__content {
@@ -143,6 +147,7 @@
 
   &__item-list {
     @include list-reset;
+
     padding-left: 24px;
     list-style-type: disc;
     display: grid;

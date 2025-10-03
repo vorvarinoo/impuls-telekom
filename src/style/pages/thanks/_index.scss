@@ -21,6 +21,7 @@
   &__descr {
     margin-bottom: 56px;
     max-width: 780px;
+
     @include media-min($lg) {
       margin-bottom: 32px;
     }
