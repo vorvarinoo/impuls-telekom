@@ -91,30 +91,45 @@ const enableSubmitBtn = ( form ) => {
   form.querySelector( '[type="submit"]' ).removeAttribute( 'disabled' );
 };
 
-const sendData = ( evt, url, isOk, isError ) => {
+const sendData = (evt, url, isOk, isError) => {
   const errorNode = evt.target;
-  const formData = new FormData( evt.target );
+  const form = evt.target;
 
-  disableSubmitBtn( evt.target );
-  fetch( url, {
-      method: 'POST',
-      body: formData,
-    } )
-    .then( ( data ) => {
-      if ( data.ok ) {
-        isOk( evt.target );
-        evt.target.reset();
-      } else {
-        isError( errorNode );
+  const formData = new FormData(form);
+
+  const napravlenieAll = form.querySelectorAll('[name="Направление"]');
+  if (napravlenieAll.length > 1) {
+    formData.delete('Направление');
+    const values = [];
+    napravlenieAll.forEach(el => {
+      if (el.checked) {
+        values.push(el.value);
       }
-    } )
-    .catch( () => {
-      isError( errorNode );
-    } )
-    .finally( () => {
-      enableSubmitBtn( evt.target );
-    } );
+    });
+    formData.append('Направление', values.join(', '));
+  }
+
+  disableSubmitBtn(form);
+  fetch(url, {
+    method: 'POST',
+    body: formData,
+  })
+    .then((data) => {
+      if (data.ok) {
+        isOk(form);
+        form.reset();
+      } else {
+        isError(errorNode);
+      }
+    })
+    .catch(() => {
+      isError(errorNode);
+    })
+    .finally(() => {
+      enableSubmitBtn(form);
+    });
 };
+
 
 export {
   debounce,
