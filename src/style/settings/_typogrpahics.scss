@@ -58,7 +58,7 @@ a {
 .t4 {
   @include indent-reset;
 
-  font-size: 16px;
+  font-size: 18px;
 
   @include media-min($xxl) {
     font-size: 24px;
@@ -73,6 +73,10 @@ a {
   @include media-min($xxl) {
     font-size: 18px;
   }
+}
+
+.t-accent {
+  color: var(--accent);
 }
 
 .contact-item {

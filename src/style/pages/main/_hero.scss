@@ -1,33 +1,30 @@
 .hero {
   background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.7) 0%,
       var(--white) 80%
     ),
-    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--white) 80%);
+    linear-gradient(270deg, rgba(255, 255, 255, 0) 49.68%, var(--white) 100%);
   position: relative;
-  padding: 120px 0;
+  padding: 246px 0 48px;
 
   @include media-min($lg) {
-    padding: 92px 0;
+    text-align: center;
+    padding: 128px 0 64px;
   }
 
   @include media-min($xxl) {
-    padding: 160px 0;
+    padding: 160px 0 96px;
   }
 
   &__title {
     display: inline-flex;
     flex-direction: column;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 
     & span {
       display: inline-block;
       color: var(--accent);
-    }
-
-    @include media-min($xl) {
-      margin-bottom: 64px;
     }
 
     @include media-min($xxl) {
@@ -35,32 +32,24 @@
     }
   }
 
-  &__descr {
-    margin-bottom: 32px;
-    display: grid;
-    gap: 16px;
+  &__meta {
+    margin-bottom: 48px;
 
     @include media-min($xxl) {
-      margin-bottom: 64px;
-    }
-
-    & p {
-      margin-bottom: 0;
-    }
-
-    & ul {
-      @include list-reset;
-
-      padding-left: 24px;
-      list-style-type: disc;
+      margin-bottom: 96px;
     }
   }
 
-  &__buttons {
-    display: grid;
+  &__list {
+    font-weight: 700;
 
-    @include media-min($md) {
+    @include media-min($lg) {
       display: flex;
+      justify-content: center;
+    }
+
+    & li:not(:last-child) {
+      margin-right: 64px;
     }
   }
 
@@ -83,35 +72,5 @@
     & span {
       font-weight: 400;
     }
-  }
-
-  &__note {
-    display: none;
-    position: absolute;
-    bottom: 48px;
-    right: 10px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: url("../img/hero-note.svg") top left / contain no-repeat,
-      url("../img/dotted-bg-secondary.png") center / cover no-repeat;
-
-    @include media-min($xl) {
-      display: block;
-    }
-  }
-
-  &__note-content {
-    position: relative;
-    padding: 64px 32px;
-    color: var(--accent);
-    max-width: 520px;
-  }
-
-  &__note-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
   }
 }

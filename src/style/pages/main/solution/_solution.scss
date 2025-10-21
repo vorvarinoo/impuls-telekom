@@ -1,11 +1,6 @@
 .solution {
   padding: 64px 0 48px;
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.8) 0%,
-      var(--white) 80%
-    ),
-    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--white) 80%);
+  background-color: var(--white);
 
   @include media-min($xl) {
     padding: 96px 0 64px;
@@ -13,6 +8,16 @@
 
   @include media-min($xxl) {
     padding: 128px 0 96px;
+  }
+
+  &__inner {
+    background-image: url("../img/dotted-bg-secondary.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 32px;
+    border-radius: 6px;
   }
 
   &__head {
@@ -47,12 +52,11 @@
 
   &__note {
     padding: 24px 16px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-image: url("../img/dotted-bg-secondary.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    text-align: center;
+
+    & span {
+      color: var(--accent);
+    }
   }
 
   &__table {

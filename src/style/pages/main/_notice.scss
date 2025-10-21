@@ -1,4 +1,20 @@
 .notice {
+  background-color: var(--white);
+  padding: 48px 0;
+
+  @include media-min($lg) {
+    padding: 64px 0;
+  }
+
+  @include media-min($xxl) {
+    padding: 96px 0;
+  }
+
+  &__main {
+    display: grid;
+    justify-items: center;
+  }
+
   &__title {
     line-height: 1.1;
     justify-self: center;

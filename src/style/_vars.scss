@@ -1,11 +1,11 @@
 :root {
-  --white: #FFFFFF;
-  --black: #000000;
+  --white: #ffffff;
+  --black: #2f2f2f;
   --black-50: #808080;
   --black-30: #b3b3b3;
   --black-10: #e6e6e6;
-  --red: #c21515;
-  --red-50: #e18a8a;
+  --red: rgba(204, 39, 0, 0.94);
+  --red-50: #e79987;
   --error: var(--red);
   --accent: var(--red);
   --accent-50: var(--red-50);

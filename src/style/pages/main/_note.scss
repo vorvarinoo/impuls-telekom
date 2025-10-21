@@ -1,0 +1,36 @@
+.note {
+  padding: 48px 0;
+  background-color: var(--white);
+
+  @include media-min($xxl) {
+    padding: 64px 0;
+  }
+
+  &__main {
+    padding: 48px 16px;
+    background: url("../img/note.svg") top/contain no-repeat,
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url("../img/dotted-bg-secondary.png") center/cover no-repeat,
+      var(--black-10);
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+
+    @include media-min($lg) {
+      padding: 96px 96px 64px;
+    }
+
+    @include media-min($xxl) {
+      padding: 128px 128px 96px;
+    }
+  }
+
+  &__main-red {
+    color: var(--red);
+  }
+}

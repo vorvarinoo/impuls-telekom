@@ -9,13 +9,13 @@ import {
   sendData,
 } from './utils.js';
 
+import { analyticFn } from './analytic.js';
+
 const justValidateConfig = validateConfig.justValidate;
 
 const isSendOk = (evt) => {
 
-  if (window.ym && typeof window.ym === 'function') {
-    window.ym( 102563691, 'reachGoal', 'form_submit' );
-  }
+  analyticFn(evt.target);
 
   const form = evt.target;
   const input = form.querySelector('input[name="thanks"]');
