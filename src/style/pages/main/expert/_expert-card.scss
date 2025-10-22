@@ -12,6 +12,11 @@
     height: 100%;
     margin-bottom: 10px;
 
+    @include media-min($xxl) {
+      max-height: 150px;
+      max-width: 150px;
+    }
+
     & img {
       width: 100%;
       height: auto;

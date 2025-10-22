@@ -3,15 +3,22 @@
     <h2 class="t1 modal__title pr-md-7">Задать вопрос эксперту</h2>
   </div>
   <form id="form-expert" class="modal-form" data-validate>
-    <input type="hidden" name="thanks" value="Наш эксперт ответит вам в течение 15 минут.">
+    <input
+      type="hidden"
+      name="thanks"
+      value="Наш эксперт ответит вам в течение 15 минут."
+    />
 
-    <input type="hidden" name="Форма" value="Задать вопрос эксперту">
+    <input type="hidden" name="Форма" value="Задать вопрос эксперту" />
     <div class="modal-form__main">
       @include('../common/form-inputs.html')
 
       <label class="form-label modal-form__row">
         <span>Вопрос:</span>
-        <textarea data-validate="message" class="form-input form-input--area"></textarea>
+        <textarea
+          data-validate="message"
+          class="form-input form-input--area"
+        ></textarea>
       </label>
 
       <span class="modal-form__note modal-form__row">
@@ -20,13 +27,18 @@
     </div>
 
     <div class="modal-form__bottom">
-      <button type="submit" class="btn btn-secondary modal-form__button">
+      <button type="submit" class="btn btn-primary modal-form__button">
         Оставить заявку
       </button>
 
       <div>
         <label class="form-checkbox form-checkbox--color-black-30">
-          <input type="checkbox" name="confirm" data-validate="confirm" required />
+          <input
+            type="checkbox"
+            name="confirm"
+            data-validate="confirm"
+            required
+          />
           <span>@include('../common/confirm-text.html')</span>
         </label>
       </div>

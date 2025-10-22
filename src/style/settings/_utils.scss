@@ -34,3 +34,15 @@ input[type="file"].visually-hidden {
     overflow: visible;
   }
 }
+
+.scale-up {
+  transition: transform var(--duration-default) ease-in-out,
+    box-shadow var(--duration-default) ease-in-out;
+
+  @include any-hover {
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 21px 54px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}

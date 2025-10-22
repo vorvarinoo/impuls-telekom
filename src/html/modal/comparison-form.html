@@ -5,9 +5,16 @@
     </h2>
   </div>
   <form id="form-comparison" class="modal-form" data-validate>
-    <input type="hidden" name="thanks"
-      value="Наш эксперт свяжется с вами в течение 15 минут и отправит сравнительный анализ.">
-    <input type="hidden" name="Форма" value="Получить сравнение: VMware vs Китай vs российские аналоги">
+    <input
+      type="hidden"
+      name="thanks"
+      value="Наш эксперт свяжется с вами в течение 15 минут и отправит сравнительный анализ."
+    />
+    <input
+      type="hidden"
+      name="Форма"
+      value="Получить сравнение: VMware vs Китай vs российские аналоги"
+    />
     <div class="modal-form__main">
       @include('../common/form-inputs.html')
 
@@ -17,13 +24,18 @@
     </div>
 
     <div class="modal-form__bottom">
-      <button type="submit" class="btn btn-secondary modal-form__button">
+      <button type="submit" class="btn btn-primary modal-form__button">
         Оставить заявку
       </button>
 
       <div>
         <label class="form-checkbox form-checkbox--color-black-30">
-          <input type="checkbox" name="confirm" data-validate="confirm" required />
+          <input
+            type="checkbox"
+            name="confirm"
+            data-validate="confirm"
+            required
+          />
           <span>@include('../common/confirm-text.html')</span>
         </label>
       </div>

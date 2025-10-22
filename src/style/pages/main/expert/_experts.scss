@@ -1,12 +1,8 @@
 .experts {
-  --wrap-background: linear-gradient(180deg, #fff 0%, #e6e6e6 100%);
-  --svg-top-color: var(--white);
-  --svg-bottom-color: var(--black-10);
-
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #fff 100%),
-    linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background-color: var(--white);
 
   &__main {
+    display: grid;
     gap: 32px;
 
     @include media-min($md) {
@@ -36,9 +32,13 @@
   }
 
   &__people {
-    background-color: var(--white);
+    background: url("../img/dotted-bg-secondary.png") center/cover no-repeat;
     border-radius: 12px;
     padding: 16px;
+
+    @include media-min($xxl) {
+      padding: 32px;
+    }
   }
 
   &__button {

@@ -3,15 +3,17 @@
     <h2 class="t1 modal__title pr-md-7">Получить альтернативу</h2>
   </div>
   <form id="form-alternative" class="modal-form" data-validate>
-    <input type="hidden" name="thanks" value="Мы уже звоним вам. Ожидайте звонок в течение 15 минут">
+    <input
+      type="hidden"
+      name="thanks"
+      value="Мы уже звоним вам. Ожидайте звонок в течение 15 минут"
+    />
 
-    <input type="hidden" name="Форма" value="Получить альтернативу">
+    <input type="hidden" name="Форма" value="Получить альтернативу" />
 
     <div class="modal-form__main">
       @include('../common/form-inputs.html')
-
       @include('../common/form-select.html')
-
       @include('../common/form-input-count.html')
 
       <span class="modal-form__note modal-form__row">
@@ -20,13 +22,18 @@
     </div>
 
     <div class="modal-form__bottom">
-      <button type="submit" class="btn btn-secondary modal-form__button">
+      <button type="submit" class="btn btn-primary modal-form__button">
         Оставить заявку
       </button>
 
       <div>
         <label class="form-checkbox form-checkbox--color-black-30">
-          <input type="checkbox" name="confirm" data-validate="confirm" required />
+          <input
+            type="checkbox"
+            name="confirm"
+            data-validate="confirm"
+            required
+          />
           <span>@include('../common/confirm-text.html')</span>
         </label>
       </div>

@@ -1,36 +1,26 @@
-import SmoothScroll from 'smooth-scroll';
+import SmoothScroll from "smooth-scroll";
 
-import {
-  smoothScrollConfig,
-  cookieConfig
-} from './configs.js';
+import { smoothScrollConfig, cookieConfig } from "./configs.js";
 
-import {
-  iosVhFix
-} from './utils.js';
+import { iosVhFix } from "./utils.js";
 
-import {
-  initScrollObserver,
-} from './scroll-observer.js';
+import { initScrollObserver } from "./scroll-observer.js";
 
-import {
-  initBurgerMenu
-} from './burger.js';
+import { initBurgerMenu } from "./burger.js";
 
-import {
-  initFixedBackgrounds
-} from './background-image.js';
-
+import { initFixedBackgrounds } from "./background-image.js";
 
 const initSiteSettings = () => {
   iosVhFix();
   initScrollObserver();
   initBurgerMenu();
   initFixedBackgrounds();
-  new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
+  new SmoothScroll('a[href*="#"]', smoothScrollConfig);
   new AcceptCookiePopup(cookieConfig);
+  AOS.init({
+    duration: 1000,
+    easing: "ease-out",
+  });
 };
 
-export {
-  initSiteSettings,
-};
+export { initSiteSettings };
