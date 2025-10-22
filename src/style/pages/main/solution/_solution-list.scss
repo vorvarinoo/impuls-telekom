@@ -1,0 +1,31 @@
+.solution-list {
+  &__item {
+    position: relative;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: var(--white);
+
+    @include media-min($xxl) {
+      padding: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 16px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 5px;
+
+    @include media-min($xxl) {
+      margin-right: 24px;
+    }
+  }
+}

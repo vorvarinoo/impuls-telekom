@@ -1,0 +1,42 @@
+.burger {
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  backdrop-filter: blur(10px);
+  background: var(--white);
+
+  &.is-open {
+    & .burger__line--top {
+      @include anim(cross-top-line, 0.4s);
+    }
+
+    & .burger__line--middle {
+      @include anim(cross-middle-line, 0.4s);
+    }
+
+    & .burger__line--bottom {
+      @include anim(cross-bottom-line, 0.4s);
+    }
+
+    & .burger__line {
+      width: 36px;
+    }
+  }
+
+  &__line {
+    width: 30px;
+    height: 2px;
+    transform-origin: center;
+    transition: background-color 0.15s ease-in-out;
+    background-color: var(--accent);
+
+    &--middle {
+      margin: 6px 0;
+    }
+  }
+}

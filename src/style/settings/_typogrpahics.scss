@@ -81,6 +81,7 @@ a {
 
 .contact-item {
   color: inherit;
+  font-weight: 700;
   transition: color var(--duration-default) ease-in-out;
 
   @include any-hover {

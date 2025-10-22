@@ -9,17 +9,12 @@
           <div class="header__menu">
             <nav class="menu">
               <ul class="list-reset menu__list">
-                @include('menu.html')
+                @include('menu.html', {class: 'header__item'})
               </ul>
             </nav>
           </div>
           <div class="header__contacts">
-            <a href="tel:+74991124743" class="header__item header__contact contact-item">
-              +7 (499) 112 47 43
-            </a>
-            <a href="mailto:kostyunin@impuls-it.ru" class="header__item header__contact contact-item">
-              kostyunin@impuls-it.ru
-            </a>
+            @include('contacts.html', {class: 'header__item header__contact'})
           </div>
         </div>
 
@@ -38,16 +33,11 @@
         <div class="burger-menu__main">
           <nav class="menu burger-menu__nav">
             <ul class="list-reset menu__list burger-menu__list">
-              @include('menu.html')
+              @include('menu.html', {class: 'burger-menu__item'})
             </ul>
           </nav>
           <div class="burger-menu__contacts">
-            <a href="tel:+74991124743" class="header__item header__contact contact-item">
-              +7 (499) 112 47 43
-            </a>
-            <a href="mailto:kostyunin@impuls-it.ru" class="header__item header__contact contact-item">
-              kostyunin@impuls-it.ru
-            </a>
+            @include('contacts.html', {class: 'burger-menu__item'})
           </div>
         </div>
       </div>

@@ -71,11 +71,15 @@
     }
 
     &:nth-child(3n + 2) {
-      margin-top: 32px;
+      @include media-min($lg) {
+        margin-top: 32px;
+      }
     }
 
     &:nth-child(3n) {
-      margin-top: 64px;
+      @include media-min($lg) {
+        margin-top: 64px;
+      }
     }
   }
 

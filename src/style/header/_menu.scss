@@ -1,0 +1,36 @@
+.menu {
+  height: 100%;
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+
+    & a {
+      display: inline-block;
+    }
+
+    @include media-max($xl) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+
+      @include media-min($xl) {
+        margin-bottom: 0;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--black-50);
+  }
+}

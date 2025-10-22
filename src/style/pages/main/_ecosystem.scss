@@ -10,6 +10,18 @@
     padding: 96px 0;
   }
 
+  &__main {
+    padding: 16px;
+
+    @include media-min($lg) {
+      padding: 32px;
+    }
+
+    @include media-min($xxl) {
+      padding: 48px;
+    }
+  }
+
   &__title {
     margin-bottom: 24px;
     display: grid;
@@ -65,9 +77,7 @@
   &__item {
     font-weight: 700;
     border-radius: 12px;
-    overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
-      url("../img/dotted-bg-primary.png") left top/ 597px 300px no-repeat;
+    background-color: var(--white);
     padding: 16px 8px;
     margin-bottom: 4px;
 
