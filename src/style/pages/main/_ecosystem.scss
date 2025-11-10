@@ -11,7 +11,7 @@
   }
 
   &__main {
-    padding: 16px;
+    padding: 24px 16px;
 
     @include media-min($lg) {
       padding: 32px;
@@ -23,11 +23,11 @@
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     display: grid;
 
     @include media-min($xxl) {
-      margin-bottom: 32px;
+      margin-bottom: 48px;
     }
 
     & span {
@@ -38,7 +38,11 @@
   &__descr {
     display: grid;
     gap: 16px;
-    max-width: 525px;
+    max-width: 396px;
+
+    @include media-min($xxl) {
+      max-width: 525px;
+    }
   }
 
   &__text {
@@ -55,23 +59,18 @@
     max-width: 310px;
     margin-bottom: 24px;
 
-    @include media-min($xxl) {
+    @include media-min($xl) {
       margin-bottom: 32px;
+    }
+
+    @include media-min($xxl) {
+      max-width: 375px;
     }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 48px;
-
-    @include media-min($xl) {
-      padding-right: 32px;
-    }
-
-    @include media-min($xxl) {
-      margin-bottom: 64px;
-    }
   }
 
   &__item {
@@ -79,11 +78,10 @@
     border-radius: 12px;
     background-color: var(--white);
     padding: 16px 8px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 
     @include media-min($lg) {
       padding: 16px;
-      margin-bottom: 8px;
     }
 
     @include media-min($xxl) {
@@ -92,10 +90,10 @@
     }
 
     &:not(:last-child) {
-      margin-right: 4px;
+      margin-right: 8px;
 
       @include media-min($xxl) {
-        margin-right: 8px;
+        margin-right: 16px;
       }
     }
   }

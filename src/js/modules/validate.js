@@ -1,92 +1,100 @@
 import JustValidate from 'just-validate';
 
-import {
-  validateConfig,
-  requestsConfig
-} from './configs.js';
+import { validateConfig, requestsConfig } from './configs.js';
 
-import {
-  sendData,
-} from './utils.js';
+import { sendData } from './utils.js';
 
 import { analyticFn } from './analytic.js';
+
+import { simpleModal } from './modal.js';
 
 const justValidateConfig = validateConfig.justValidate;
 
 const isSendOk = (evt) => {
 
-  analyticFn(evt.target);
+  if (evt) {
+    analyticFn(evt);
 
-  const form = evt.target;
-  const input = form.querySelector('input[name="thanks"]');
+    const input = evt.querySelector('input[name="thanks"]');
 
-  if (input) {
-    window.open(`/thanks.html?message-thanks=${input.value}`);
+    if (input) {
+      window.open(`/thanks.html?message-thanks=${input.value}`);
+    }
+
+    simpleModal.close();
   }
 };
 
-const isSendError = ( target ) => {
-  target.classList.add( justValidateConfig.errorFormClass );
-  setTimeout( () => {
-    target.classList.remove( justValidateConfig.errorFormClass );
-  }, validateConfig.errorTimeout );
+const isSendError = (target) => {
+  target.classList.add(justValidateConfig.errorFormClass);
+  setTimeout(() => {
+    target.classList.remove(justValidateConfig.errorFormClass);
+  }, validateConfig.errorTimeout);
 };
 
 export const validateForms = () => {
-  const forms = document.querySelectorAll( 'form[data-validate]' );
+  const forms = document.querySelectorAll('form[data-validate]');
 
-  if ( forms.length < 1 ) return;
+  if (forms.length < 1) return;
 
-  forms.forEach( ( form ) => {
+  forms.forEach((form) => {
     const formID = `#${form.id}`;
     const sentParams = form.dataset.params ? form.dataset.params : '';
-    const validationRules = new JustValidate( formID, justValidateConfig );
-    const requiredFields = document.querySelectorAll( `${formID} [required]` );
-    new JustPhoneMask( validateConfig.mask );
+    const validationRules = new JustValidate(formID, justValidateConfig);
+    const requiredFields = document.querySelectorAll(`${formID} [required]`);
+    new JustPhoneMask(validateConfig.mask);
 
-    requiredFields.forEach( ( input ) => {
-      switch ( input.dataset.validate ) {
+    requiredFields.forEach((input) => {
+      switch (input.dataset.validate) {
         case 'name':
-          validationRules.addField( `${formID} [data-validate="name"]`, [ {
-            rule: 'required',
-            value: true,
-            errorMessage: 'Поле обязательно для заполнения'
-          }, ] );
-          break;
-        case 'company':
-          validationRules.addField( `${formID} [data-validate="company"]`, [ {
-            rule: 'required',
-            value: true,
-            errorMessage: 'Поле обязательно для заполнения'
-          }, ] );
-          break;
-        case 'email':
-          validationRules.addField( `${formID} [data-validate="email"]`, [ {
+          validationRules.addField(`${formID} [data-validate="name"]`, [
+            {
               rule: 'required',
               value: true,
-              errorMessage: 'Поле обязательно для заполнения'
+              errorMessage: 'Поле обязательно для заполнения',
+            },
+          ]);
+          break;
+        case 'company':
+          validationRules.addField(`${formID} [data-validate="company"]`, [
+            {
+              rule: 'required',
+              value: true,
+              errorMessage: 'Поле обязательно для заполнения',
+            },
+          ]);
+          break;
+        case 'email':
+          validationRules.addField(`${formID} [data-validate="email"]`, [
+            {
+              rule: 'required',
+              value: true,
+              errorMessage: 'Поле обязательно для заполнения',
             },
             {
               rule: 'email',
               errorMessage: 'Некорректный адрес электронной почты',
             },
-          ] );
+          ]);
           break;
         case 'phone':
-          validationRules.addField( `${formID} [data-validate="phone"]`, [ {
+          validationRules.addField(`${formID} [data-validate="phone"]`, [
+            {
               rule: 'required',
               value: true,
               errorMessage: 'Поле обязательно для заполнения',
             },
             {
               rule: 'minLength',
-              value: document.querySelector( `${formID} [data-validate="phone"]` ).dataset.mask.length,
+              value: document.querySelector(`${formID} [data-validate="phone"]`)
+                .dataset.mask.length,
               errorMessage: 'Введите телефон в формате +7 (---) --- -- --',
             },
-          ] );
+          ]);
           break;
         case 'message':
-          validationRules.addField( `${formID} [data-validate="message"]`, [ {
+          validationRules.addField(`${formID} [data-validate="message"]`, [
+            {
               rule: 'required',
               value: true,
               errorMessage: 'Поле обязательно для заполнения',
@@ -101,19 +109,27 @@ export const validateForms = () => {
               value: 200,
               errorMessage: 'Длина сообщения превышает 200 символов',
             },
-          ] );
+          ]);
           break;
         case 'confirm':
-          validationRules.addField( `${formID} [data-validate="confirm"]`, [ {
-            rule: 'required',
-            value: true,
-            errorMessage: 'Подтвердите согласие на обработку персональных данных',
-          }, ] );
+          validationRules.addField(`${formID} [data-validate="confirm"]`, [
+            {
+              rule: 'required',
+              value: true,
+              errorMessage:
+                'Подтвердите согласие на обработку персональных данных',
+            },
+          ]);
           break;
       }
-    } );
-    validationRules.onSuccess( ( evt ) => {
-      sendData( evt, `${requestsConfig.handlerURL}${sentParams}`, isSendOk(evt), isSendError );
-    } );
-  } );
+    });
+    validationRules.onSuccess((evt) => {
+      sendData(
+        evt,
+        `${requestsConfig.handlerURL}${sentParams}`,
+        isSendOk,
+        isSendError
+      );
+    });
+  });
 };

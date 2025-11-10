@@ -1,41 +1,38 @@
 const COUNTER_ID = 102563691;
 
 export const analyticFn = (form) => {
-let target;
+  let target;
 
-console.log(form.id)
-
-switch (form.id) {
-    case 'form-demo':
-     target = 'submit_demo';
-     break;
-
+  switch (form.id) {
     case 'form-comparison':
-     target = 'submit_comparison';
-     break;
+      target = 'submit_comparison';
+      break;
 
     case 'form-alternative':
-     target = 'submit_alternative';
-     break;
+      target = 'submit_alternative';
+      break;
 
     case 'form-architectural-scheme':
-     target = 'submit_architectural-scheme';
-     break;
+      target = 'submit_architectural-scheme';
+      break;
 
     case 'form-audit':
-     target = 'submit_audit';
-     break;
+      target = 'submit_audit';
+      break;
 
     case 'form-case':
-     target = 'submit_case';
-     break;
+      target = 'submit_case';
+      break;
+
+    case 'form-expert':
+      target = 'submit_expert';
+      break;
 
     default:
-     return;
-}
+      return;
+  }
 
-if(!target) return;
-  ym(COUNTER_ID,'reachGoal', target);
-  ym(COUNTER_ID,'reachGoal', 'submit__form-all');
-  console.log(target)
+  if (!target) return;
+  ym(COUNTER_ID, 'reachGoal', target);
+  ym(COUNTER_ID, 'reachGoal', 'submit__form-all');
 };

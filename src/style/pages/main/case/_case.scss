@@ -12,14 +12,6 @@
     }
   }
 
-  &__text {
-    margin-top: 16px;
-
-    @include media-min($xxl) {
-      margin-top: 24px;
-    }
-  }
-
   &__main {
     display: grid;
     gap: 32px;
@@ -48,6 +40,16 @@
   }
 
   &__button {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    @include media-min($lg) {
+      margin-top: 64px;
+    }
+
+    @include media-min($xxl) {
+      margin-top: 96px;
+    }
   }
 }

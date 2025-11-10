@@ -1,0 +1,55 @@
+.experts {
+  background-color: var(--white);
+
+  &__main {
+    display: grid;
+    gap: 32px;
+
+    @include media-min($md) {
+      grid-template-columns: 1fr 0.6fr;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 16px;
+    margin-bottom: 32px;
+
+    @include media-min($md) {
+      margin-bottom: 64px;
+    }
+
+    @include media-min($xxl) {
+      margin-top: 24px;
+    }
+  }
+
+  &__people {
+    background: url("../img/dotted-bg-secondary.png") center/cover no-repeat;
+    border-radius: 12px;
+    padding: 16px;
+
+    @include media-min($xxl) {
+      padding: 32px;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+    width: 100%;
+
+    @include media-min($md) {
+      width: auto;
+    }
+
+    @include media-min($xxl) {
+      margin-top: 64px;
+    }
+  }
+}

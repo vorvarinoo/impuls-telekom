@@ -43,7 +43,7 @@ const requestsConfig = {
 
 const cookieConfig = {
   linkCookiePage: '/policy.html'
-}
+};
 
 export {
   smoothScrollConfig,

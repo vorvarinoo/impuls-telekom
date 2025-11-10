@@ -30,6 +30,8 @@
     border-color var(--duration-default) ease-in-out;
   padding: 32px 16px;
   line-height: 1.4;
+  background-color: var(--accent);
+  color: var(--white);
 
   @include media-min($xxl) {
     padding: 40px 32px;
@@ -42,9 +44,4 @@
       border-color: var(--black);
     }
   }
-}
-
-.btn-primary {
-  background-color: var(--accent);
-  color: var(--white);
 }
